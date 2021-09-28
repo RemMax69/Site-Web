@@ -1,0 +1,57 @@
+header{
+    background-image: url("fleurs.jpg");
+}
+body{
+    background-color: rgb(255, 192, 203);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+h1 {
+    color: blue 
+    }
+h2 {
+    color: red ;
+    display: flex ;
+    flex-direction: row;
+}
+.menu{
+    display: flex;
+    flex-direction: row ;
+    flex-grow: 2;
+    justify-content: space-evenly;
+}
+.search {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 0%;
+    border: 1px solid ;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: yellowgreen;
+}
+a {
+    color: green;
+
+}
+.article {
+    display: flex;
+    flex-direction:row ;
+    justify-content: space-evenly;
+}
+.produit{
+    display: flex;
+    flex-direction: column;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+}
+.formulaire{
+    display:flex ;
+    flex-direction: column;
+}
+.renseignement{
+    margin-right: 500px;
+}
