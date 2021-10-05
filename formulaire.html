@@ -5,27 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
-    <link rel="stylesheet" href="Style-page-accueil.css">
+    <link rel="stylesheet" href="Style-Global.css">
+    <script src="https://kit.fontawesome.com/dde21921c6.js" crossorigin="anonymous"></script>   
 </head>
 <body>
     <header>
         <h1 class="h1"> Formulaire<br/></h1>
-        <nav class="menu">
-            <a href="Page_accueil.html">Acceuil</a>
-            <a href="produit.html">Produit</a>
-            <a href="contact.html">Contact</a>
-            <a href="panier.html">panier</a>
-        </nav>
+        <section class="menu">
+            <a  href="Page_accueil.html">Acceuil</a>
+            <a  href="Personnalisation.html">Personnalisation</a>
+            <a  href="contact.html">Contact</a>
+            <a  href="panier.html">panier</a>
+            <input class="search" type="search" placeholder="chercher un produit">
+        </section>
     </header>
     <section >
         <h1>Formulaire de commande</h1>
         <section class="form">
             <form>
-                <label >prénom:</label>
-                <input type="text">
-                <label >nom:</label>
-                <input type="text"> <br/>
                 <section class="formulaire">
+                    <label >prénom:</label>
+                    <input class="renseignement" type="text">
+                    <label >nom:</label>
+                    <input class="renseignement" type="text"> <br/>
                     <label >adresse mail:</label>
                     <input class="renseignement" type="text"> <br/>
                     <label >téléphone:</label>
@@ -38,24 +40,32 @@
                     <input type="checkbox">
                 </section>
             </form>
-            <label >récapitulatif de la commande:</label> <br/>
-            <img src="Bracelet.jpeg" alt="">
+            <section class="formulaire">
+                <label >récapitulatif de la commande:</label> <br/>
+                <img src="Bracelet.jpeg" alt="">
+            </section>
         </section>
     </section>
 
 
         </form>
-    </section>
 <footer>
     <h1>Réseau Sociaux</h1></br>
-        <section class="footer">
-            <a href="#"><img class="logo" src="logo-FB.png" alt=""></a>
-            <a href="#"><img class="logo" src="logo-Insta.jpeg" alt=""></a>
-            <a href="#"><img class="logo" src="logo-Twiter.png" alt=""></a>
+    <section class="footer">
+        <section class="footer1">
+            <a  href="Page_accueil.html">Acceuil</a>
+            <a  href="Personnalisation.html">Personnalisation</a>
+            <a  href="contact.html">Contact</a>
+            <a  href="panier.html">Panier</a>
+        </section>
+        <section class="footer2">
+            <a class="logo" href="#"><i class="fab fa-facebook" ></i></a>
+            <a class="logo" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="logo" href="#"><i class="fab fa-twitter"></i></a>
+        </section>
     </section>
-    <p>Bijouterie de Pernel et Maximilien 69006</p>
+        <p>Bijouterie de Pernel et Maximilien 69006</p>
 
 </footer>
-
 </body>
 </html>
