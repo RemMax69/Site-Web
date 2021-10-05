@@ -23,7 +23,7 @@
     
 
 <section class="article">
-    <button id="precedent" onclick="precedent()"><</button>
+    <button id="precedent" onclick="precedent()"> < </button>
     <section class="articl-img">
        
         <img id="image" class="image" src="images/bracelet or.jpg">
@@ -37,7 +37,7 @@
         <section class="choix">
             <section class="colonne">
                 <h2 class="Titres2"> Chaine du bracelet </h2> 
-                <select class="select" name="chaine bracelet">
+                <select onchange="changement(this)" class="select" name="chaine bracelet">
                     <option value="or">Or</option>
                     <option value="argent">Argent</option>
                     <option value="corde">Corde</option>
@@ -69,12 +69,7 @@
 
      
  </select>
-<img class="image" src="images/corde.jpg">
-     <img class="image" src="images/bracelet argent.jpg">
-     <img class="image" src="images/bracelet or.jpg">
-     <img class="image" src="images/key.jpg">
-     <img class="image" src="images/pierre violet.jpg">
-     <img class="image" src="images/pierrebleue.jpg">
+
 </p>
 <footer>
     <h1 class="h1">Réseau Sociaux</h1></br>
@@ -94,6 +89,8 @@
     <p class="Bijouterie"> Bijouterie de Pernel et Maximilien </p>
 </footer>
 <script src="scriptperso.js"></script>
+<script src="scriptimages.js"></script>
+
 
 </body>
 </html>
