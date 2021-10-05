@@ -36,9 +36,6 @@ footer{
     color: purple;
     text-align: center;
 }
-h2{
-    color: black;
-}
 .menu{
     display: flex;
     flex-direction: row ;
@@ -62,30 +59,7 @@ h2{
 a:hover{
     color: black
 }
-.article {
-    display: flex;
-    flex-direction:row ;
-    justify-content: space-evenly;
-    background-color: grey;
-    width: 100%;
-    height: auto;
-}
-.article1{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-.produit{
-    display: flex;
-    flex-direction: column;
-}
-.overlay{
-    color: black;
-    background-color: black;
-}
-.produit a:hover .overlay{
-    opacity: 1;
-}
+
 a{
     color: purple;
 }
@@ -106,4 +80,7 @@ a{
 .logo{
     font-size: 1rem;
     color:blue;
+}
+.Bijouterie{
+    text-align: center;
 }
