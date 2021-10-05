@@ -1,0 +1,38 @@
+.image {
+    width: 100px;
+    height: 100px;
+}
+
+h1{
+    color:rgb(201, 7, 65);
+    text-align: center;
+    
+}
+body{ 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:rgb(255,192,203)
+}
+.article{
+    display: flex;
+    flex-direction: row;
+}
+.choix{
+    display: flex;x
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+
+.select{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.colonne{
+    display: flex;
+    flex-direction: column;
+
+}
+    
+
