@@ -3,14 +3,14 @@
     height: 100px;
 }
 
-h1{
+.h1{
     color:rgb(201, 7, 65);
     text-align: center;
     
 }
 body{ 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color:rgb(255,192,203)
+    background-color: rgb(206, 203, 203);
 }
 .article{
     display: flex;
@@ -21,7 +21,6 @@ body{
     align-items: center;
     flex-direction: row;
     justify-content: space-evenly;
-    
 }
 
 .select{
@@ -34,5 +33,5 @@ body{
     flex-direction: column;
 
 }
-    
+
 
