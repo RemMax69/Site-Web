@@ -9,9 +9,7 @@ class new_header extends HTMLElement{
             "<a class='nav' href='panier.html'>Panier</a>"+
             "<input class='search' type='search' placeholder='chercher un produit'>"+
 
-            "<a class='nav' href='panier.html'>panier</a>"+
-            "<input class='search' onchange='search(this)' type='search' placeholder='chercher un produit'>"+
-
+            
         "</section>"
     }
 }
