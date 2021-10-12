@@ -5,8 +5,13 @@ class new_header extends HTMLElement{
             "<a class='nav' href='Page_accueil.html'>Accueil</a>"+
             "<a class='nav' href='Personnalisation.html'>Personnalisation</a>"+
             "<a class='nav' href='contact.html'>Contact</a>"+
+
             "<a class='nav' href='panier.html'>Panier</a>"+
             "<input class='search' type='search' placeholder='chercher un produit'>"+
+
+            "<a class='nav' href='panier.html'>panier</a>"+
+            "<input class='search' onchange='search(this)' type='search' placeholder='chercher un produit'>"+
+
         "</section>"
     }
 }
@@ -35,3 +40,25 @@ class new_footer extends HTMLElement{
     }
 }
 customElements.define('new-footer',new_footer)
+
+var nav =[
+    "Page_accueil.html",
+    "Personnalisation.html",
+    "contact.html",
+    "panier.html",
+]
+
+function search(select){
+    if (select.value = "accueil"){
+        document.getElementById("nav").src = "Page_accueil.html"
+    }
+    if (select.value = "personalisation"){
+        document.getElementById("nav").src = "Personnalisation.html"
+    }
+    if (select.value = "contact"){
+        document.getElementById("nav").src = "contact.html"
+    }
+    if (select.value = "panier"){
+        document.getElementById("nav").src = "panier.html"
+    }
+}
