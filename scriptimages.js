@@ -19,19 +19,22 @@ produits = {
     "Charms"
     ), 
     collier: new Produit('Collier', [
+        'images/collier or.jpg',
         'images/Colier.jpeg',
         'images/collier argent.jpg',
-        'images/collier or.jpg',
         'images/icollier.jpg',
     ],"chaine du collier"
     ),
 
     silicone: new Produit('silicone',
-    ['images/bracelet or.jpg']
+    ["images/violet.jpg",
+    "images/blanc.jpg",
+    "images/vert.jpeg" ]
     ),
 
     bague: new Produit('bague', 
-    ['images/bracelet or.jpg'
+    ["images/Bague.jpeg",
+
     ],"Monture",
     "Pierre"
     )
@@ -44,7 +47,7 @@ console.log(produits[id].images)
 document.getElementById("titreproduit").innerText = produits[id].nom
 document.getElementById("chaine").innerText = produits[id].titre
 document.getElementById("charms").innerText = produits[id].pierre;
-
+document.getElementById("image").src = produits[id].images[0]
 var index = 0;
 
 var images = produits[id].images
@@ -70,8 +73,6 @@ if (id ==="bague"){
     document.getElementById("champcharmsbracelet").style.display = "none";
 
 }
-
-
 function suivant() {
     console.log("on a cliqué sur suivant")
     index = (index + 1) % images.length;
@@ -84,25 +85,35 @@ function precedent() {
     index=images.length-1
     }else{
     index = (index-1)% images.length;}
-    document.getElementById("imags").src = images[index]
+    document.getElementById("image").src = images[index]
 }
-
-
 
 function changement(select){
     console.log(select.value)
-    if (select.value="or") {
-        document.getElementById("image").src = "images/bracelet or.jpg"
+    if (id === "bracelet"){
+        if (select.value=="or") {
+            document.getElementById("image").src = "images/bracelet or.jpg"
+        }
+        else if (select.value=="argent") {
+            
+            document.getElementById("image").src = "images/bracelet argent.jpg"
+        } 
+        else{
+            document.getElementById("image").src = "images/corde.jpg"
+        }
+    }else if (id ==="collier"){
+        if (select.value=="or"){
+            document.getElementById("image").src = 'images/collier or.jpg'
+        }
+        else if (select.value=="argent"){
+            document.getElementById("image").src = 'images/collier argent.jpg'
+        }
+    }else if (id==="bague"){
+        if (select.value=="or"){
+            document.getElementById("image").src = "#"
+        }
+        else if (select.value=="argent"){
+            document.getElementById("image").src = "#"
+        }
     }
-    if (select.value="argent") {
-        
-        document.getElementById("image").src = "images/bracelet argent.jpg"
-      
-    } 
-    
-    else{
-        document.getElementById("image").src = "images/corde.jpg"
-    }
-    
-
 }
