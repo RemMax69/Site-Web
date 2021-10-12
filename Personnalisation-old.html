@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personnalisation bracelet silicone</title>
+    <link rel="stylesheet" href="personalisation.css"> 
+    <link rel="stylesheet" href="Style-global.css">
+    <script src="https://kit.fontawesome.com/dde21921c6.js" crossorigin="anonymous"></script>
+    <script defer src="scriptperso.js"></script>
+    <script defer src="global.js"></script>
+</head>
+<body>
+    <new-header></new-header>
+    Couleur 
+    <br/>
+    <select name="couleur">
+        <option value="vert">Vert</option>
+        <option value="blanc">Blanc</option>
+        <option value="violet">Violet</option>
+    </select>
+  <p>
+      <img class="image" src="images/vert.jpeg"/>
+      <img class="image" src="images/blanc.jpg"/>
+      <img class="image" src="images/violet.jpg"/>
+  </p> 
+
+  <form method="post" action="traitement.php">
+      <p>
+          <label for="gravure">Gravure (10 caractères maximum):</label>
+          <input type="text" name="gravure" required maxlength="10"/>
+      </p>
+  </form>
+
+  <a href="mettre la page d'accueil">Retour</a>
+
+  Collier
+  Pendentif
+  <br/>
+  <select name="pendentif" id="choixcollier">
+      <option value="coeur">Coeur</option>
+      <option value="globe">Globe</option>
+      <option value="cheval">Cheval</option>
+      <option value="rond">Médaille ronde</option>
+  </select>
+<p>
+Chaine du collier
+    <select name="chaine">
+        <option value="or">Or</option>
+        <option value="argent">Argent</option>
+    </select>
+
+    <img class="image" src="images/coeur.jpg"/>
+    <img class="image" src="images/globe.jpeg">
+    <img class="image" src="images/horse.jpg">
+    <img class="image" src="images/rond.jpg">
+    <img class="image" src="images/collier argent.jpg">
+    <img class="image" src="images/collier or.jpg">
+
+<header>Bracelet</header>
+Chaine du bracelet 
+  <select name="chaine bracelet" id="choixbracelet">
+      <option value="or">Or</option>
+      <option value="argent">Argent</option>
+      <option value="corde">Corde</option>
+  </select>
+Charms
+ <select name="charms">
+     <option value="rondbleu">Pierre bleue</option>
+     <option value="violet">Pierre violette</option>
+     <option value="key">Clé</option>
+ </select>
+<img class="image" src="images/corde.jpg">
+     <img class="image" src="images/bracelet argent.jpg">
+     <img class="image" src="images/bracelet or.jpg">
+     <img class="image" src="images/key.jpg">
+     <img class="image" src="images/pierre violet.jpg">
+     <img class="image" src="images/pierrebleue.jpg">
+</p>
+<img class="bannière" src="images/fleurs.jpg">
+<new-footer></new-footer>
+ 
+</body>
+</html>
