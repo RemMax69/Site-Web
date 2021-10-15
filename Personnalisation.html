@@ -18,13 +18,13 @@
     
 
 <section class="article">
-    <button id="precedent" onclick="precedent()"> < </button>
-    <section class="articl-img">
-       
-        <img id="image" class="image" src="#">
-
+    <section class="article-img">    
+        <button id="precedent" onclick="precedent()"> < </button>
+        <section >
+            <img id="image" class="image" src="#">
+        </section>
+        <button id="suivant" onclick="suivant()">></button>
     </section>
-    <button id="suivant" onclick="suivant()">></button>
     <section class="articleperso">
         <h1 class="h1" id="titreproduit"> </h1>
         <section class="choix">
@@ -38,15 +38,15 @@
             </section>
             <section class="colonne" id="charmsbracelet">
                 <h2 class="Titres2" id="charms"> </h2>
-                <select class="select" name="charms">
-                    <option value="rondbleu">Pierre bleue</option>
-                    <option value="violet">Pierre violette</option>
+                <select onchange="changement(this)" class="select" name="charms">
+                    <option value="pierre bleu">Pierre bleue</option>
+                    <option value="pierre violet">Pierre violette</option>
                     <option value="key" id="champcharmsbracelet">Clé</option>
                 </select>
             </section>
             <section class="colonne" id="pendentif">
-                <h2 class="Titres2" > Pendentif</h2>
-                <select name="pendentif" id="choixcollier">
+                <h2 class="Titres2"> Pendentif</h2>
+                <select onchange="changement(this)" name="pendentif" id="choixcollier">
                     <option value="coeur">Coeur</option>
                     <option value="globe">Globe</option>
                     <option value="cheval">Cheval</option>
@@ -55,7 +55,7 @@
             </section>
             <section class="colonne" id="couleur">
                 <h2 class="Titres2"> Couleur</h2>
-                <select name="couleur">
+                <select onchange="changement(this)" class="select" name="couleur">
                     <option value="vert">Vert</option>
                     <option value="blanc">Blanc</option>
                     <option value="violet">Violet</option>
@@ -64,23 +64,15 @@
             <section class="colonne">
                 <form class="select" method="post" action="traitement.php">
                     <h2 class="Titres2">Gravure (10 carcatères maximum)</h2>
-                    <input type="text" name="gravure" required maxlength="10"/>
-                    
+                    <input type="text" name="gravure" required maxlength="10"/>     
                 </form>
             </section>
-
-
-
         </section>
-        bouton panier
     </section>
-<a href="mettre la page d'accueil">Retour</a>
-</section>
-
-     
- </select>
-
-</p>
+    <section class="retour">
+        <a href="Page_accueil.html">Retour</a>
+    </section>
+</section>     
 <new-footer></new-footer>
 
 

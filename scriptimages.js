@@ -57,7 +57,8 @@ if (id === "bracelet") {
     document.getElementById("couleur").style.display = "none";
 }
 if (id === "collier"){
-    document.getElementById("champChaineBracelet").style.display = "none";
+    /* document.getElementById("champChaineBracelet").style.display = "none"; */
+    document.getElementById("champChaineBracelet").disabled = true;
     document.getElementById("charmsbracelet").style.display = "none";
     document.getElementById("couleur").style.display = "none";
 }
@@ -89,17 +90,24 @@ function precedent() {
 }
 
 function changement(select){
-    console.log(select.value)
     if (id === "bracelet"){
-        if (select.value=="or") {
+        if (select.value=="or"){
             document.getElementById("image").src = "images/bracelet or.jpg"
         }
-        else if (select.value=="argent") {
-            
+        else if (select.value=="argent"){
             document.getElementById("image").src = "images/bracelet argent.jpg"
         } 
-        else{
+        else if (select.value=="corde"){
             document.getElementById("image").src = "images/corde.jpg"
+        }
+        else if (select.value=="pierre bleu"){
+            document.getElementById("image").src = "images/pierrebleue.jpg"
+        }
+        else if (select.value=="pierre violet"){
+            document.getElementById("image").src = "images/pierre violet.jpg"
+        }
+        else if (select.value=="key"){
+            document.getElementById("image").src = "images/key.jpg"
         }
     }else if (id ==="collier"){
         if (select.value=="or"){
@@ -108,12 +116,40 @@ function changement(select){
         else if (select.value=="argent"){
             document.getElementById("image").src = 'images/collier argent.jpg'
         }
+        else if (select.value=="coeur"){
+            document.getElementById("image").src = 'images/coeur.jpg'
+        }
+        else if (select.value=="globe"){
+            document.getElementById("image").src = 'images/globe.jpeg'
+        }
+        else if (select.value=="cheval"){
+            document.getElementById("image").src = 'images/horse.jpg'
+        }
+        else if (select.value=="rond"){
+            document.getElementById("image").src = 'images/rond.jpg'
+        }
     }else if (id==="bague"){
         if (select.value=="or"){
             document.getElementById("image").src = "#"
         }
         else if (select.value=="argent"){
+            document.getElementById("image").src = "Bague.jpeg"
+        }
+        else if (select.value=="pierre bleu"){
             document.getElementById("image").src = "#"
+        }
+        else if (select.value=="pierre violet"){
+            document.getElementById("image").src = "#"
+        }
+    }else if (id ==="silicone"){
+        if (select.value=="vert"){
+            document.getElementById("image").src = "images/vert.jpeg"
+        }
+        else if (select.value=="blanc"){
+            document.getElementById("image").src = "images/blanc.jpg"
+        }
+        else if (select.value=="violet"){
+            document.getElementById("image").src = "images/violet.jpg"
         }
     }
 }
