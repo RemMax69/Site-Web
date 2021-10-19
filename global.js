@@ -4,7 +4,7 @@ class new_header extends HTMLElement{
         "<section class='menu'>"+
             "<a class='nav' href='Page_accueil.html'>Accueil</a>"+
             "<a class='nav' href='contact.html'>Contact</a>"+
-            "<a class='nav' href='panier.html'>Panier</a>"+
+            "<a class='nav' href='formulaire.html'>Panier</a>"+
             "<input class='search' type='search' placeholder='chercher un produit'>"+
         "</section>"
     }
@@ -20,7 +20,7 @@ class new_footer extends HTMLElement{
             "<section class='footer1'>"+
                 "<a  href='Page_accueil.html'>Accueil</a>"+
                 "<a  href='contact.html'>Contact</a>"+
-                "<a  href='panier.html'>Panier</a>"+
+                "<a  href='formulaire.html'>Panier</a>"+
             "</section>"+
             "<section class='footer2'>"+
                 "<a class='logo' href='#'><i class='fab fa-facebook'></i></a>"+
