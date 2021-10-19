@@ -1,3 +1,4 @@
+var prix = 
 function image(){
-    document.getElementById()
+    prix
 }

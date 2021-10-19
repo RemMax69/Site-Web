@@ -31,7 +31,7 @@ body{
 .panier{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     justify-items: center;
 }
 .prix{

@@ -91,7 +91,7 @@ function precedent() {
     index = (index-1)% images.length;}
     document.getElementById("image").src = images[index]
 }
-var prix = produits[id].prixbase + produits[id].suplement 
+var prix = produits[id].prixbase 
 
 function changement(select){
     if (id === "bracelet"){
@@ -166,5 +166,23 @@ function changement(select){
             document.getElementById("image").src = "images/violet.jpg"
         }
     }
-    document.getElementById("prix").innerText = prix
+    document.getElementById("prix").innerText = prix+ produits[id].suplement
+}
+var nbproduit = 0
+function pannieradd(){
+    console.log('on a cliquer sur panier')
+    nbproduit= nbproduit + 1 
+    console.log(nbproduit)
+    document.getElementById("nbproduit").innerText = nbproduit 
+}
+function panniersupr(){
+    if (nbproduit > 0){
+        console.log('on a cliquer sur panier')
+        nbproduit= nbproduit - 1 
+        console.log(nbproduit)
+        document.getElementById("nbproduit").innerText = nbproduit 
+    }
+    else{
+    }
+
 }
