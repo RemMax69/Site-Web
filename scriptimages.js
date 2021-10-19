@@ -1,9 +1,11 @@
 class Produit {
-    constructor(nom, images, titre, pierre) {
+    constructor(nom, images, titre, pierre, prixbase, suplement) {
         this.nom = nom;
         this.images = images;
         this.titre = titre;
-        this.pierre =pierre;
+        this.pierre = pierre;
+        this.prixbase = prixbase;
+        this.suplement = suplement;
     }
 }
 
@@ -25,8 +27,7 @@ produits = {
         'images/icollier.jpg',
     ],"chaine du collier"
     ),
-
-    silicone: new Produit('silicone',
+    silicone: new Produit('Silicone',
     ["images/violet.jpg",
     "images/blanc.jpg",
     "images/vert.jpeg" ]
@@ -94,13 +95,16 @@ function precedent() {
 function changement(select){
     if (id === "bracelet"){
         if (select.value=="or"){
-            document.getElementById("image").src = "images/bracelet or.jpg"
+            document.getElementById("image").src = "images/bracelet or.jpg";
+            produits[id].suplement = 5
         }
         else if (select.value=="argent"){
-            document.getElementById("image").src = "images/bracelet argent.jpg"
+            document.getElementById("image").src = "images/bracelet argent.jpg";
+            produits[id].suplement = 3
         } 
         else if (select.value=="corde"){
-            document.getElementById("image").src = "images/corde.jpg"
+            document.getElementById("image").src = "images/corde.jpg";
+            produits[id].suplement = 1
         }
         else if (select.value=="pierre bleu"){
             document.getElementById("image").src = "images/pierrebleue.jpg"
@@ -113,10 +117,12 @@ function changement(select){
         }
     }else if (id ==="collier"){
         if (select.value=="or"){
-            document.getElementById("image").src = 'images/collier or.jpg'
+            document.getElementById("image").src = 'images/collier or.jpg';
+            produits[id].suplement = 5
         }
         else if (select.value=="argent"){
-            document.getElementById("image").src = 'images/collier argent.jpg'
+            document.getElementById("image").src = 'images/collier argent.jpg';
+            produits[id].suplement = 1
         }
         else if (select.value=="coeur"){
             document.getElementById("image").src = 'images/coeur.jpg'
@@ -136,6 +142,11 @@ function changement(select){
         }
         else if (select.value=="argent"){
             document.getElementById("image").src = "images/Bague.jpeg"
+            produits[id].suplement = 5
+        }
+        else if (select.value=="argent"){
+            document.getElementById("image").src = "Bague.jpeg";
+            produits[id].suplement = 3
         }
         else if (select.value=="pierre bleu"){
             document.getElementById("image").src = 'images/baguebleu.jpg'
