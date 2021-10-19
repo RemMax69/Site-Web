@@ -3,13 +3,9 @@ class new_header extends HTMLElement{
         this.innerHTML = "<h1 class='h1' > Accueil</h1>"+
         "<section class='menu'>"+
             "<a class='nav' href='Page_accueil.html'>Accueil</a>"+
-            "<a class='nav' href='Personnalisation.html'>Personnalisation</a>"+
             "<a class='nav' href='contact.html'>Contact</a>"+
-
             "<a class='nav' href='panier.html'>Panier</a>"+
             "<input class='search' type='search' placeholder='chercher un produit'>"+
-
-            
         "</section>"
     }
 }
