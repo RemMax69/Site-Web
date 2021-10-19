@@ -39,6 +39,7 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    
 }
 .retour{
     flex-grow: 1;
@@ -53,6 +54,9 @@ body{
 .select{
     margin-left: 1rem;
     margin-right: 1rem;
+    background-color: rgba(226, 152, 255, 0.966);
+    color:rgb(252, 252, 252);
+
 }
 .colonne{
     display: flex;
@@ -60,4 +64,15 @@ body{
 }
 .Titres2{
     font-size: 1rem;
+}
+
+.boutonpanier{
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 45px;
+    width: 150px;
+    height: 25px;
+    background-color: rgba(226, 152, 255, 0.966);
+    color:rgb(252, 252, 252);
+
 }
