@@ -1,0 +1,25 @@
+.panier{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+}.prix{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+
+}
+.formulaire{
+    display:flex ;
+    flex-direction: column;
+}
+.renseignement{
+    margin-right: 0;
+}

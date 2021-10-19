@@ -91,6 +91,7 @@ function precedent() {
     index = (index-1)% images.length;}
     document.getElementById("image").src = images[index]
 }
+var prix = produits[id].prixbase + produits[id].suplement 
 
 function changement(select){
     if (id === "bracelet"){
@@ -165,5 +166,5 @@ function changement(select){
             document.getElementById("image").src = "images/violet.jpg"
         }
     }
-    document.getElementById("prix").innerText = produits[id].prixbase + produits[id].suplement 
+    document.getElementById("prix").innerText = prix
 }

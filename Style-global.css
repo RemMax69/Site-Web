@@ -70,20 +70,7 @@ footer{
     display: block;
     color:tomato;
 }
-.form{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
 
-}
-.formulaire{
-    display:flex ;
-    flex-direction: column;
-}
-.renseignement{
-    margin-right: 0;
-}
 
 .Bijouterie{
     text-align: center;
