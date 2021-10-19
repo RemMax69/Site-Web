@@ -1,5 +1,5 @@
 class Produit {
-    constructor(nom, images, titre, pierre, prixbase, suplement) {
+    constructor(nom, images, titre, pierre, prixbase = 10, suplement) {
         this.nom = nom;
         this.images = images;
         this.titre = titre;
@@ -158,4 +158,5 @@ function changement(select){
             document.getElementById("image").src = "images/violet.jpg"
         }
     }
+    document.getElementById("prix").innerText = produits[id].prixbase + produits[id].suplement 
 }
