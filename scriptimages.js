@@ -32,8 +32,12 @@ produits = {
     "images/blanc.jpg",
     "images/vert.jpeg" ]
     ),
-    bague: new Produit('Bague', 
-    ["images/Bague.jpeg",
+
+    bague: new Produit('bague', 
+        ["images/Bague.jpeg",
+        "images/baguebleu.jpg",
+        "images/bagueor.jpg",
+        "images/bagueviolet.jpg"
     ],"Monture",
     "Pierre"
     )
@@ -55,9 +59,9 @@ if (id === "bracelet") {
     document.getElementById("pendentif").style.display = "none";
     document.getElementById("couleur").style.display = "none";
 }
-if (id === "collier"){     
+if (id === "collier"){
     document.getElementById("champChaineBracelet").style.display = "none";
-/*     document.getElementById("champChaineBracelet").disabled = true; */
+    /* document.getElementById("champChaineBracelet").disabled = true; */
     document.getElementById("charmsbracelet").style.display = "none";
     document.getElementById("couleur").style.display = "none";
 }
@@ -134,7 +138,10 @@ function changement(select){
         }
     }else if (id==="bague"){
         if (select.value=="or"){
-            document.getElementById("image").src = "#";
+            document.getElementById("image").src = 'images/bagueor.jpg'
+        }
+        else if (select.value=="argent"){
+            document.getElementById("image").src = "images/Bague.jpeg"
             produits[id].suplement = 5
         }
         else if (select.value=="argent"){
@@ -142,10 +149,10 @@ function changement(select){
             produits[id].suplement = 3
         }
         else if (select.value=="pierre bleu"){
-            document.getElementById("image").src = "#"
+            document.getElementById("image").src = 'images/baguebleu.jpg'
         }
         else if (select.value=="pierre violet"){
-            document.getElementById("image").src = "#"
+            document.getElementById("image").src = 'images/bagueviolet.jpg'
         }
     }else if (id ==="silicone"){
         if (select.value=="vert"){
