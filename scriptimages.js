@@ -92,7 +92,7 @@ function precedent() {
     document.getElementById("image").src = images[index]
 }
 var prix = produits[id].prixbase 
-
+var prixtotal = prix
 function changement(select){
     if (id === "bracelet"){
         if (select.value=="or"){
@@ -166,23 +166,32 @@ function changement(select){
             document.getElementById("image").src = "images/violet.jpg"
         }
     }
-    document.getElementById("prix").innerText = prix+ produits[id].suplement
+    prixtotal = prix+ produits[id].suplement
+    document.getElementById("prix").innerText = prixtotal
 }
 var nbproduit = 0
+
+var articles = []
 function pannieradd(){
     console.log('on a cliquer sur panier')
-    nbproduit= nbproduit + 1 
+    articles.push(produits[id])
+    nbproduit = nbproduit + 1 
     console.log(nbproduit)
+
+    const articlesTexte = JSON.stringify(articles)
+    console.log(articlesTexte)
+
+    localStorage.setItem("articles", articlesTexte)
+    localStorage.setItem("prix", JSON.stringify(prixtotal))
     document.getElementById("nbproduit").innerText = nbproduit 
 }
 function panniersupr(){
     if (nbproduit > 0){
         console.log('on a cliquer sur panier')
-        nbproduit= nbproduit - 1 
+        nbproduit = nbproduit - 1 
         console.log(nbproduit)
         document.getElementById("nbproduit").innerText = nbproduit 
     }
     else{
     }
-
 }
