@@ -19,7 +19,6 @@ class new_footer extends HTMLElement{
         "<section class='footer'>"+
             "<section class='footer1'>"+
                 "<a  href='Page_accueil.html'>Accueil</a>"+
-                "<a  href='Personnalisation.html'>Personnalisation</a>"+
                 "<a  href='contact.html'>Contact</a>"+
                 "<a  href='panier.html'>Panier</a>"+
             "</section>"+
@@ -37,7 +36,6 @@ customElements.define('new-footer',new_footer)
 
 var nav =[
     "Page_accueil.html",
-    "Personnalisation.html",
     "contact.html",
     "panier.html",
 ]
