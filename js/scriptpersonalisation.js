@@ -45,8 +45,7 @@ produits = {
 
 
 let id = new URLSearchParams(window.location.search).get("id");
-console.log(id);
-console.log(produits[id].images)
+
 document.getElementById("titreproduit").innerText = produits[id].nom
 document.getElementById("chaine").innerText = produits[id].titre
 document.getElementById("charms").innerText = produits[id].pierre;
@@ -172,6 +171,7 @@ function changement(select){
 var nbproduit = 0
 
 var articles = []
+
 function pannieradd(){
     console.log('on a cliquer sur panier')
     articles.push(produits[id])

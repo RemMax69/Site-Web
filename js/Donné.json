@@ -1,10 +1,3 @@
-[
-    {
-        "name": "Bracelet"
-        
-    }
-]
-
 {
     "bracelet" : "Bracelet",
     "cordon" : [
@@ -17,25 +10,22 @@
         ["pierre bleu", 7],
         ["clé", 4]
     ],
-    "gravure" : 12
-}
+    "gravure" : 12,
 
-{
+
      "collier" : "Collier",
      "chaine du collier" : [
          ["argent", 5],
-         ["or", 7],
+         ["or", 7]
      ],
      "pendentif" : [
          ["coeur", 1 ],
          ["globe", 2],
          ["cheval", 3],
-         ["médaille", 4],
+         ["médaille", 4]
      ],
-     "gravure" : 12
- }
+     "gravure" : 12,
 
- {
      "silicone" : "Silicone",
-     "couleur" : 
- }
+     "couleur" :  "blue"
+}
