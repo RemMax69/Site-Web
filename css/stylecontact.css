@@ -3,6 +3,14 @@
 }
 .infos{
     text-align: center;
+    color:rgb(255, 118, 141);
 }
 
+.nouscontacter{
+    color: rgb(255, 118, 141);
+}
+
+.carte{
+    margin-left: 150;
+}
 

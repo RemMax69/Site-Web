@@ -37,7 +37,7 @@ footer{
     text-align: center;
 }
 .h2{
-    color: rgb(197, 45, 45);
+    color: rgb(117, 92, 207);
 }
 .menu{
     display: flex;
@@ -46,7 +46,7 @@ footer{
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 118, 141);
-    border: solid white 1px;
+    border: solid rgb(255, 118, 141) 1px;
     opacity: 0,1;
 }
 .search {
