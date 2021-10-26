@@ -93,23 +93,30 @@ function precedent() {
 var prix = produits[id].prixbase 
 var prixtotal = 0
 var produitchoisie = []
+/* var produitselect = [] */
+var imagechoisie = "";
 
 function changement(select){
     if (id === "bracelet"){
         if (select.value=="or"){
+/*             produitselect.pop(produitselect) */
             document.getElementById("image").src = "images/bracelet or.jpg";
+            imagechoisie = "images/bracelet or.jpg"
             produits[id].suplement = 5
-            produitchoisie.push("images/bracelet or.jpg")
         }
         else if (select.value=="argent"){
+/*             produitselect.pop(produitselect) */
             document.getElementById("image").src = "images/bracelet argent.jpg";
             produits[id].suplement = 3
-            produitchoisie.push("images/bracelet argent.jpg")
+            imagechoisie = "images/bracelet argent.jpg"
+            //produitchoisie.push(produitselect)
         } 
         else if (select.value=="corde"){
+/*             produitselect.pop(produitselect) */
             document.getElementById("image").src = "images/corde.jpg";
             produits[id].suplement = 1
-            produitchoisie.push("images/corde.jpg")
+            imagechoisie = "images/corde.jpg"
+
         }
         else if (select.value=="pierre bleu"){
             document.getElementById("image").src = "images/pierrebleue.jpg"
@@ -194,32 +201,27 @@ var nbproduit = 0
 var articles = []
 
 function pannieradd(){
-/*     articles.push(produits[id]) */
     nbproduit = nbproduit + 1 
-    console.log(nbproduit)
 
-    const articlesTexte = JSON.stringify(articles)
-    console.log(articlesTexte)
-
-/*     localStorage.setItem("articles", articlesTexte) */
+produitchoisie.push({produit: produits[id], image: imagechoisie})
+    prixtotal = prixtotal + prix + produits[id].suplement
     localStorage.setItem("prix", JSON.stringify(prixtotal))
     localStorage.setItem("produitchoisie", JSON.stringify(produitchoisie))
     document.getElementById("nbproduit").innerText = nbproduit 
 
-    prixtotal = prixtotal + prix + produits[id].suplement
-    produitchoisie.push(produits[id])
+
     document.getElementById("prix").innerText = prixtotal
 }
 function panniersupr(){
     if (nbproduit > 0){
         nbproduit = nbproduit - 1 
         console.log(nbproduit)
-
+        
+        const produitsuppr = produitchoisie.pop(produitchoisie.length-1)
+        console.log(produitsuppr)
+        prixtotal = prixtotal - produitsuppr.prixbase - produitsuppr.suplement
         localStorage.setItem("prix", JSON.stringify(prixtotal))
         localStorage.setItem("produitchoisie", JSON.stringify(produitchoisie))
-
-        produitchoisie.pop(produitchoisie.length-1)
-        prixtotal = prixtotal - prix - produits[id].suplement
 
         document.getElementById("prix").innerText = prixtotal
         document.getElementById("nbproduit").innerText = nbproduit 
