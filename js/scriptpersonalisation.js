@@ -183,7 +183,7 @@ function changement(select){
             produitchoisie.push("images/vert.jpeg")
         }
         else if (select.value=="blanc"){
-            document.getElementById("image").src = "images/vert.jpeg"
+            document.getElementById("image").src = "images/blanc.jpg"
             produitchoisie.push("images/vert.jpeg")
         }
         else if (select.value=="violet"){
