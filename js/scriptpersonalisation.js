@@ -91,105 +91,139 @@ function precedent() {
     document.getElementById("image").src = images[index]
 }
 var prix = produits[id].prixbase 
-var prixtotal = prix
+var prixtotal = 0
+var produitchoisie = []
+/* var produitselect = [] */
+var imagechoisie = "";
+
 function changement(select){
     if (id === "bracelet"){
         if (select.value=="or"){
+/*             produitselect.pop(produitselect) */
             document.getElementById("image").src = "images/bracelet or.jpg";
+            imagechoisie = "images/bracelet or.jpg"
             produits[id].suplement = 5
         }
         else if (select.value=="argent"){
+/*             produitselect.pop(produitselect) */
             document.getElementById("image").src = "images/bracelet argent.jpg";
             produits[id].suplement = 3
+            imagechoisie = "images/bracelet argent.jpg"
+            //produitchoisie.push(produitselect)
         } 
         else if (select.value=="corde"){
+/*             produitselect.pop(produitselect) */
             document.getElementById("image").src = "images/corde.jpg";
             produits[id].suplement = 1
+            imagechoisie = "images/corde.jpg"
+
         }
         else if (select.value=="pierre bleu"){
             document.getElementById("image").src = "images/pierrebleue.jpg"
+            produitchoisie.push("images/pierrebleue.jpg")
         }
         else if (select.value=="pierre violet"){
-            document.getElementById("image").src = "images/pierre violet.jpg"
+            document.getElementById("image").src = "images/pierrebleue.jpg"
+            produitchoisie.push("images/pierrebleue.jpg")
         }
         else if (select.value=="key"){
             document.getElementById("image").src = "images/key.jpg"
+            produitchoisie.push("images/key.jpg")
         }
     }else if (id ==="collier"){
         if (select.value=="or"){
             document.getElementById("image").src = 'images/collier or.jpg';
             produits[id].suplement = 5
+            produitchoisie.push('images/collier or.jpg')
         }
         else if (select.value=="argent"){
             document.getElementById("image").src = 'images/collier argent.jpg';
             produits[id].suplement = 1
+            produitchoisie.push('images/collier argent.jpg')
         }
         else if (select.value=="coeur"){
             document.getElementById("image").src = 'images/coeur.jpg'
+            produitchoisie.push('images/coeur.jpg')
         }
         else if (select.value=="globe"){
             document.getElementById("image").src = 'images/globe.jpeg'
+            produitchoisie.push('images/globe.jpeg')
         }
         else if (select.value=="cheval"){
             document.getElementById("image").src = 'images/horse.jpg'
+            produitchoisie.push('images/horse.jpg')
         }
         else if (select.value=="rond"){
             document.getElementById("image").src = 'images/rond.jpg'
+            produitchoisie.push('images/rond.jpg')
         }
     }else if (id==="bague"){
         if (select.value=="or"){
             document.getElementById("image").src = 'images/bagueor.jpg'
+            produitchoisie.push('images/bagueor.jpg')
         }
         else if (select.value=="argent"){
             document.getElementById("image").src = "images/Bague.jpeg"
             produits[id].suplement = 5
+            produitchoisie.push("images/Bague.jpeg")
         }
         else if (select.value=="argent"){
             document.getElementById("image").src = "Bague.jpeg";
             produits[id].suplement = 3
+            produitchoisie.push("Bague.jpeg")
         }
         else if (select.value=="pierre bleu"){
             document.getElementById("image").src = 'images/baguebleu.jpg'
+            produitchoisie.push('images/baguebleu.jpg')
         }
         else if (select.value=="pierre violet"){
             document.getElementById("image").src = 'images/bagueviolet.jpg'
+            produitchoisie.push('images/bagueviolet.jpg')
         }
     }else if (id ==="silicone"){
         if (select.value=="vert"){
             document.getElementById("image").src = "images/vert.jpeg"
+            produitchoisie.push("images/vert.jpeg")
         }
         else if (select.value=="blanc"){
-            document.getElementById("image").src = "images/blanc.jpg"
+            document.getElementById("image").src = "images/vert.jpeg"
+            produitchoisie.push("images/vert.jpeg")
         }
         else if (select.value=="violet"){
             document.getElementById("image").src = "images/violet.jpg"
+            produitchoisie.push("images/violet.jpg")
         }
     }
-    prixtotal = prix+ produits[id].suplement
-    document.getElementById("prix").innerText = prixtotal
+
 }
 var nbproduit = 0
 
 var articles = []
 
 function pannieradd(){
-    console.log('on a cliquer sur panier')
-    articles.push(produits[id])
     nbproduit = nbproduit + 1 
-    console.log(nbproduit)
 
-    const articlesTexte = JSON.stringify(articles)
-    console.log(articlesTexte)
-
-    localStorage.setItem("articles", articlesTexte)
+produitchoisie.push({produit: produits[id], image: imagechoisie})
+    prixtotal = prixtotal + prix + produits[id].suplement
     localStorage.setItem("prix", JSON.stringify(prixtotal))
+    localStorage.setItem("produitchoisie", JSON.stringify(produitchoisie))
     document.getElementById("nbproduit").innerText = nbproduit 
+
+
+    document.getElementById("prix").innerText = prixtotal
 }
 function panniersupr(){
     if (nbproduit > 0){
-        console.log('on a cliquer sur panier')
         nbproduit = nbproduit - 1 
         console.log(nbproduit)
+        
+        const produitsuppr = produitchoisie.pop(produitchoisie.length-1)
+        console.log(produitsuppr)
+        prixtotal = prixtotal - produitsuppr.prixbase - produitsuppr.suplement
+        localStorage.setItem("prix", JSON.stringify(prixtotal))
+        localStorage.setItem("produitchoisie", JSON.stringify(produitchoisie))
+
+        document.getElementById("prix").innerText = prixtotal
         document.getElementById("nbproduit").innerText = nbproduit 
     }
     else{
