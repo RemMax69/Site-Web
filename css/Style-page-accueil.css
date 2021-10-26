@@ -12,7 +12,7 @@
 .produit{
     display: flex;
     flex-direction: column;
-    height: 25rem;
+    height: 27rem;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -59,4 +59,9 @@
 }
 .renseignement{
     margin-right: 500px;
+}
+
+.filtre{
+    background-color: beige; 
+    border-color:rgb(255, 132, 153);
 }

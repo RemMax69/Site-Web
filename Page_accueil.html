@@ -9,18 +9,27 @@
     <link rel="stylesheet" href="css/Style-page-accueil.css">
     <script src="https://kit.fontawesome.com/dde21921c6.js" crossorigin="anonymous"></script>
     <script defer src="js/global.js"></script>
+    <script defer src="js/scriptaccueil.js"></script>
 </head>
 <body>
     <new-header></new-header>
+    <select class="filtre" onchange="filtrer(this)">
+        <option value="tout">Tout voir</option>
+        <option value="bracelets">Bracelets</option>
+        <option value="colliers">Colliers</option>
+        <option value="bagues">Bagues</option>
+    </select>
+
     <section class="article">
+        
         <section class="article1">
-            <div class="produit">
+            <div class="produit" id="number1">
                 <a class="produit1" href="Personnalisation.html?id=bracelet">
                     <h2 class="h2"> Bracelet</h2>
                     <img class="overlay" src="/images/bracelet or.jpg" >
                 </a>
             </div>
-            <div class="produit">
+            <div class="produit" id="number3">
                 <a class="" href="Personnalisation.html?id=silicone">
                     <h2 class="h2"> Bracelet Silicone</h2>
                     <img class="overlay" src="/images/violet.jpg">
@@ -28,13 +37,13 @@
             </div>
         </section>
         <section class="article1">
-            <div class="produit">
+            <div class="produit" id="number2">
                 <a href="Personnalisation.html?id=collier">
                     <h2 class="h2"> Collier </h2>
                     <img class="overlay" src="/images/Colier.jpeg" >
                 </a>
             </div>
-            <div class="produit">
+            <div class="produit" id="number4">
                 <a href="Personnalisation.html?id=bague">
                     <h2 class="h2">Bague</h2>
                     <img class="overlay" src="/images/Bague.jpeg" alt="">
