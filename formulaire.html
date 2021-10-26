@@ -28,12 +28,12 @@
                     <input class="renseignement" type="text"> <br/>
                     <label >Téléphone:</label>
                     <input class="renseignement" type="text"> <br/>
-                    <label > Adresse de livraison:</label>
-                    <input class="renseignement" type="text"> <br/>
+                    <label> Adresse de livraison:</label>
+                    <input onchange="adresse(event)" class="renseignement" type="text"> <br/>
                     <label >Date de livraison souhaitée:</label>
                     <input class="renseignement" type="text"> <br/>
-                    <label id="express" >Commande express</label>
-                    <input type="checkbox">
+                    <label >Commande express</label>
+                    <input id="express" type="checkbox" onchange="coche(this)">
                 </section>
             </form>
             <section class="formulaire">
