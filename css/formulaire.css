@@ -1,12 +1,12 @@
 .panier{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     justify-items: center;
 }.prix{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
 }
 .form{
@@ -28,4 +28,8 @@
     flex-direction: column;
     height: 250px;
     width: 250px;
+}
+.image{
+    display: flex;
+    flex-direction: row;
 }

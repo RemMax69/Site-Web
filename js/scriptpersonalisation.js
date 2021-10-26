@@ -93,42 +93,39 @@ function precedent() {
 var prix = produits[id].prixbase 
 var prixtotal = 0
 var produitchoisie = []
-/* var produitselect = [] */
-var imagechoisie = "";
+var imagechoisie1 = "#";
+var imagechoisie2 = "#";
 
 function changement(select){
     if (id === "bracelet"){
         if (select.value=="or"){
-/*             produitselect.pop(produitselect) */
             document.getElementById("image").src = "images/bracelet or.jpg";
-            imagechoisie = "images/bracelet or.jpg"
             produits[id].suplement = 5
+            imagechoisie1 = "images/bracelet or.jpg"
         }
         else if (select.value=="argent"){
-/*             produitselect.pop(produitselect) */
             document.getElementById("image").src = "images/bracelet argent.jpg";
             produits[id].suplement = 3
-            imagechoisie = "images/bracelet argent.jpg"
-            //produitchoisie.push(produitselect)
+            imagechoisie1 = "images/bracelet argent.jpg"
         } 
         else if (select.value=="corde"){
-/*             produitselect.pop(produitselect) */
             document.getElementById("image").src = "images/corde.jpg";
             produits[id].suplement = 1
-            imagechoisie = "images/corde.jpg"
+            imagechoisie1 = "images/corde.jpg"
 
         }
         else if (select.value=="pierre bleu"){
             document.getElementById("image").src = "images/pierrebleue.jpg"
-            produitchoisie.push("images/pierrebleue.jpg")
+            imagechoisie2 = "images/pierrebleue.jpg"
         }
         else if (select.value=="pierre violet"){
             document.getElementById("image").src = "images/pierrebleue.jpg"
-            produitchoisie.push("images/pierrebleue.jpg")
+            imagechoisie2 = "images/pierrebleue.jpg"
         }
         else if (select.value=="key"){
             document.getElementById("image").src = "images/key.jpg"
             produitchoisie.push("images/key.jpg")
+            imagechoisie2 = "images/key.jpg"
         }
     }else if (id ==="collier"){
         if (select.value=="or"){
@@ -202,26 +199,29 @@ var articles = []
 
 function pannieradd(){
     nbproduit = nbproduit + 1 
+    console.log(produitchoisie)
 
-produitchoisie.push({produit: produits[id], image: imagechoisie})
+    produitchoisie.push({produit: produits[id], image1: imagechoisie1, image2: imagechoisie2})
     prixtotal = prixtotal + prix + produits[id].suplement
     localStorage.setItem("prix", JSON.stringify(prixtotal))
     localStorage.setItem("produitchoisie", JSON.stringify(produitchoisie))
-    document.getElementById("nbproduit").innerText = nbproduit 
+    localStorage.setItem("nbproduit", JSON.stringify(nbproduit))
 
+    document.getElementById("nbproduit").innerText = nbproduit 
 
     document.getElementById("prix").innerText = prixtotal
 }
 function panniersupr(){
     if (nbproduit > 0){
         nbproduit = nbproduit - 1 
-        console.log(nbproduit)
         
         const produitsuppr = produitchoisie.pop(produitchoisie.length-1)
-        console.log(produitsuppr)
-        prixtotal = prixtotal - produitsuppr.prixbase - produitsuppr.suplement
+        console.log(produitchoisie)
+        console.log(produitsuppr.produit.suplement)
+        prixtotal = prixtotal - produitsuppr.produit.prixbase - produitsuppr.produit.suplement
         localStorage.setItem("prix", JSON.stringify(prixtotal))
         localStorage.setItem("produitchoisie", JSON.stringify(produitchoisie))
+        localStorage.setItem("nbproduit", JSON.stringify(nbproduit))
 
         document.getElementById("prix").innerText = prixtotal
         document.getElementById("nbproduit").innerText = nbproduit 
