@@ -3,7 +3,7 @@
     height: 20rem;
 }
 .h1{
-    color:purple;
+    color:rgb(255, 255, 255);
     text-align: center;
     font-size: 40px;
     margin: 1em
@@ -40,10 +40,13 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    color:rgb(255, 255, 255);
+    font-size: 20px;
     
 }
 .retour{
     flex-grow: 1;
+    
 }
 .choix{
     display: flex;
@@ -55,8 +58,9 @@ body{
 .select{
     margin-left: 1rem;
     margin-right: 1rem;
-    background-color: rgba(226, 152, 255, 0.966);
-    color:rgb(252, 252, 252);
+    background-color: rgba(255, 255, 255, 0.966);
+    color: rgb(255, 132, 153);
+    border-color: rgb(255, 118, 141);;
 
 }
 .colonne{
@@ -65,16 +69,19 @@ body{
 }
 .Titres2{
     font-size: 1rem;
+    color: rgb(255, 255, 255);;
 }
 
 .boutonpanier{
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 45px;
+    padding-bottom: 30px;
     width: 150px;
     height: 25px;
-    background-color: rgba(226, 152, 255, 0.966);
-    color:rgb(252, 252, 252);
+    background-color: rgba(255, 255, 255, 0.966);
+    color:rgb(255, 118, 141);
+    border-color: rgb(255, 118, 141);
 
 }
 
@@ -82,4 +89,18 @@ body{
     background-color: rgba(255, 255, 255, 0);
     width: 2rem;
     height: 4rem;
+    border-color: rgba(245, 245, 220, 0);
+    font-size: 30px;
+    color:rgb(255, 118, 141);
 }
+
+#suivant{
+    background-color: rgba(255, 255, 255, 0);
+    width: 2rem;
+    height: 4rem;
+    border-color: rgba(245, 245, 220, 0);
+    font-size: 30px;
+    color:rgb(255, 118, 141);
+} 
+
+

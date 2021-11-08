@@ -37,7 +37,7 @@ footer{
     text-align: center;
 }
 .h2{
-    color: rgb(117, 92, 207);
+    color: rgb(255, 118, 141);
 }
 .menu{
     display: flex;
@@ -58,6 +58,9 @@ footer{
     padding: 10px 20px;
     cursor: pointer;
     background-color: rgb(255, 118, 141);
+    
+    
+    
 }
 .nav{
     color: white;
@@ -66,15 +69,16 @@ footer{
     text-align: center;
 }
 .nav:hover{
-    background-color: #777;
+    background-color: rgb(255, 255, 255);
     transition: ease-in-out 0.3s;
     display: block;
-    color:tomato;
+    color:rgb(255, 118, 141);
 }
 
 
 .Bijouterie{
     text-align: center;
+    color:rgb(255, 118, 141);
 }
 .logo{
     color: rgb(255, 118, 141);
