@@ -95,9 +95,10 @@ var prixtotal = 0
 var produitchoisie = []
 var imagechoisie1 = "#";
 var imagechoisie2 = "#";
-
+var currentProduit = "";
 function changement(select){
     if (id === "bracelet"){
+        currentProduit = select.value;
         if (select.value=="or"){
             document.getElementById("image").src = "images/bracelet or.jpg";
             produits[id].suplement = 5
@@ -197,28 +198,76 @@ var nbproduit = 0
 
 var articles = []
 
-function pannieradd(){
-    nbproduit = nbproduit + 1 
-    console.log(produitchoisie)
+var nbArticles = 0
+var listeArticles = {"or":0, "argent":0, "corde":0}
 
+function arrayHandler(isAdd, idButton){
+    
+    if (idButton == "or"){
+        listeArticles[idButton] = (isAdd*parseInt(nbArticles)) + parseInt(listeArticles[idButton]);
+        }
+    else if (idButton  == "argent"){
+        listeArticles[idButton] = (isAdd*parseInt(nbArticles)) + parseInt(listeArticles[idButton]);
+        }
+    else if (currentProduit == "corde"){
+        listeArticles[idButton] = (isAdd*parseInt(nbArticles) )+ parseInt(listeArticles[idButton]);
+        }
+    
+    tabBody = document.getElementById("tableauArticle")  
+    document.getElementById("tableauArticle").innerText=""
+    for (const [key, value] of Object.entries(listeArticles)) {
+        row=document.createElement("tr");
+        cell1 = document.createElement("td");
+        cell2 = document.createElement("td");
+        button = document.createElement("button");
+        button.setAttribute("id", key);
+        textnode1=document.createTextNode(key);
+        textnode2=document.createTextNode(value);
+        textnode3=document.createTextNode("Suprimer");
+        cell1.appendChild(textnode1);
+        cell2.appendChild(textnode2);
+        button.appendChild(textnode3);
+        button.onclick = function() {
+            panniersupr(this.id);
+        };
+/*         document.getElementById("button").addEventListener('click',function (){panniersupr()}); */
+        row.appendChild(cell1);
+        row.appendChild(cell2);
+        row.appendChild(button);
+ /*        button.onclick = panniersupr() */
+        tabBody.appendChild(row);
+    }
+
+}
+function pannieradd(){
+    
+    console.log(produitchoisie)
+    
     produitchoisie.push({produit: produits[id], image1: imagechoisie1, image2: imagechoisie2})
-    prixtotal = prixtotal + prix + produits[id].suplement
+
+    nbArticles = document.getElementById("nbArticles").value
+    prixtotal = prixtotal + ((prix + produits[id].suplement)*nbArticles)
+    document.getElementById("prix").innerText = prixtotal
+
+    nbproduit = nbproduit + parseInt(nbArticles, 10)
+    document.getElementById("nbproduit").innerText = nbproduit 
+
+    
+    arrayHandler(1,currentProduit);
     localStorage.setItem("prix", JSON.stringify(prixtotal))
     localStorage.setItem("produitchoisie", JSON.stringify(produitchoisie))
     localStorage.setItem("nbproduit", JSON.stringify(nbproduit))
-
-    document.getElementById("nbproduit").innerText = nbproduit 
-
-    document.getElementById("prix").innerText = prixtotal
 }
-function panniersupr(){
+console.log(listeArticles)
+function panniersupr(idButton){
+
+    
     if (nbproduit > 0){
-        nbproduit = nbproduit - 1 
+        
+        nbproduit = nbproduit -  nbArticles
         
         const produitsuppr = produitchoisie.pop(produitchoisie.length-1)
-        console.log(produitchoisie)
-        console.log(produitsuppr.produit.suplement)
-        prixtotal = prixtotal - produitsuppr.produit.prixbase - produitsuppr.produit.suplement
+        prixtotal = prixtotal - ((produitsuppr.produit.prixbase + produitsuppr.produit.suplement)*nbArticles)
         localStorage.setItem("prix", JSON.stringify(prixtotal))
         localStorage.setItem("produitchoisie", JSON.stringify(produitchoisie))
         localStorage.setItem("nbproduit", JSON.stringify(nbproduit))
@@ -228,4 +277,10 @@ function panniersupr(){
     }
     else{
     }
+
+    if (parseInt(nbproduit, 10) >0 ){
+        console.log(nbproduit)
+        arrayHandler(-1,idButton);
+    }
+    
 }

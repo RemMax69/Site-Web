@@ -30,7 +30,7 @@
         <section class="choix">
             <section class="colonne" id="matiere" >
                 <h2 class="Titres2" id="chaine"> </h2> 
-                <select onchange="changement(this)" class="select" name="chaine bracelet">
+                <select onchange="changement(this)" class="select" name="chaine bracelet" id="select">
                     <option value="or">Or</option>
                     <option value="argent">Argent</option>
                     <option value="corde" id="champChaineBracelet">Corde</option>
@@ -63,13 +63,16 @@
             </section>
             <section class="colonne">
                 <form class="selectG" method="post" action="traitement.php">
-                    <h2 class="Titres2" >Gravure (10 caractères maximum)</h2>
-                    <input type="text" name="gravure" required maxlength="10"/>     
+                    <h2 class="Titres2" >Nombre d'article </h2>
+                    <input type="number" name="gravure" min="1" max="10" id="nbArticles" value="1"/>     
                 </form>
             </section>
         </section>
+        <section id="tableauArticle">  
+
+        </section>
         <section class="panier">
-            <button onclick="pannieradd(this)" class="boutonpanier">Ajouter au panier</button>
+            <button onclick="pannieradd()" class="boutonpanier">Ajouter au panier</button>
             <h2 class="prix">
                 Prix de la commande: 
                 <p id="prix">0,00</p>
